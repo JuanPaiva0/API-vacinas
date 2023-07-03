@@ -8,10 +8,13 @@ import java.sql.SQLException;
 
 public class VacinaAdolescenteModelMapper implements RowMapper<VacinaAdolescenteModel> {
 
+    //metodo responsavel por fazer a consulta na tabela para retornar somnete os nomes da vacinas,
+    //na classe controller é chamado por ::mapRowToName
     public String mapRowToName(ResultSet rs, int rowNum) throws SQLException {
         return rs.getString("nome_vacina");
     }
 
+    //metodo responsavel por retornar todas as informações de uma unica vacina
     public VacinaAdolescenteModel mapRow(ResultSet rs, int rowNum) throws SQLException {
         VacinaAdolescenteModel vacina = new VacinaAdolescenteModel();
         vacina.setNome_vacina(rs.getString("nome_vacina"));

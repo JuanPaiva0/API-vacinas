@@ -24,17 +24,18 @@ import java.util.List;
 public class VacinaController {
 
     @Autowired
-    private VacinaGestanteRepository repository;
-    @Autowired
     private JdbcTemplate jdbc;
+    //implementação da JdbcTemplate, é o que ira executar os códigos SQL
 
 
+    //metodo que irá retornar somente os nomes das vacinas para gestante
     @GetMapping("/gestante")
     public List<String> getAllNamesGestante() {
         String sql = "SELECT nome_vacina FROM vacina_gestante";
         return jdbc.query(sql, new VacinaGestanteModelMapper()::mapRowToName);
     }
 
+    //metodo que irá retornar todas as informações da vacina requisitada pelo id
     @GetMapping("/gestante/{id}")
     public VacinaGestanteModel getAllInfosGestante(@PathVariable ("id") Integer id) {
         String sql = "SELECT * FROM vacina_gestante WHERE id_VacinaGestante = ?";
@@ -46,12 +47,14 @@ public class VacinaController {
         }
     }
 
+    //metodo que irá retornar somente os nomes das vacinas para idoso/adulto
     @GetMapping("/idoso-adulto")
     public List<String> getAllNamesIdosoAdulto(){
         String sql = "SELECT nome_vacina FROM  vacina_idosoadulto";
         return jdbc.query(sql, new VacinaIdosoAdultoModelMapper()::mapRowToName);
     }
 
+    //metodo que irá retornar todas as informações da vacina requisitada pelo id
     @GetMapping("/idoso-adulto/{id}")
     public VacinaIdosoAdultoModel getAllInfosIdosoAdulto(@PathVariable ("id") Integer id) {
         String sql = "SELECT * FROM vacina_idosoadulto WHERE id_vacinaIdosoAdulto = ?";
@@ -63,12 +66,14 @@ public class VacinaController {
         }
     }
 
+    //metodo que irá retornar somente os nomes das vacinas para criancas
     @GetMapping("/criancas")
     public List<String> getAllNamesCriancas(){
         String sql = "SELECT nome_vacina FROM vacina_criancas";
         return jdbc.query(sql, new VacinaCriancasModelMapper()::mapRowToName);
     }
 
+    //metodo que irá retornar todas as informações da vacina requisitada pelo id
     @GetMapping("/criancas/{id}")
     public VacinaCriancasModel getAllInfosCriancas(@PathVariable ("id") Integer id){
         String sql = "SELECT * FROM vacina_criancas WHERE id_vacinaCriancas = ?";
@@ -80,12 +85,14 @@ public class VacinaController {
         }
     }
 
+    //metodo que irá retornar somente os nomes das vacinas para adolescentes
     @GetMapping("/adolescente")
     public List<String> getAllNamesAdolescente(){
         String sql = "SELECT nome_vacina FROM vacina_adolescente";
         return jdbc.query(sql, new VacinaAdolescenteModelMapper()::mapRowToName);
     }
 
+    //metodo que irá retornar todas as informações da vacina requisitada pelo id
     @GetMapping("/adolescente/{id}")
     public VacinaAdolescenteModel getallInfosAdolescente(@PathVariable ("id") Integer id){
         String sql = "SELECT * FROM vacina_adolescente WHERE id_vacinaAdolescente = ?";
