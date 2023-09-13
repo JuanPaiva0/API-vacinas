@@ -10,7 +10,7 @@ CREATE TABLE vacina_idosoAdulto(
   num_doses varchar(200),
   idade_recomendada varchar(100),
   intervalo_doses varchar(200),
-  primary key (id_vacinaIdosoAdulto)
+  primary key (id_vacinaIdosoAdulto);
 )
 --Criação da tabela de vacinas para idosos e adultos
 
@@ -23,7 +23,7 @@ INSERT INTO vacina_idosoAdulto (nome_vacina, protecao_contra, composicao, num_do
  'Recomendado: 2 dose, 1 mes apos primeira dois. 
   3 dose, 6 meses apos primeira dose.
   Minimo: 2 dose, 1 mes apos primeira dose. 
-  3 dose, 4 meses apos primeira dose')
+  3 dose, 4 meses apos primeira dose');
 
 --inserção de dados na tabela de vacinas de idoso e adultos
 
@@ -37,7 +37,7 @@ INSERT INTO vacina_idosoAdulto (nome_vacina, protecao_contra, composicao, num_do
 Reforço: A cada 10 anos. Em casos de ferimentos graves a cada 5 anos)',
 ' ', 
 'Recomendado: 60 dias. 
-Minino: 30 dias')
+Minino: 30 dias');
 
 -- dados vacina Difteria e Tétano (dT)
 
@@ -48,7 +48,7 @@ INSERT INTO vacina_idosoAdulto (nome_vacina, protecao_contra, composicao, num_do
  'Esquema basico: Dose unica, para pessoa que nunca foramm vacinadas ou sem comprovante de vacinção. 
   Reforço: Reforço, caso a pessoa tenha recebido uma dose da vacina antes de completar 5 anos de idade até 59 anos de idade.',
  'Dose única para pessoas até 59 anos de idade, não vacinada',
- ' ')
+ ' ');
 
 -- dados vacina Febre Amarela
 
@@ -58,7 +58,7 @@ INSERT INTO vacina_idosoAdulto (nome_vacina, protecao_contra, composicao, num_do
  'Viús vivo atenuado', 
  '2 doses (20 a 29 anos) 1 dose (30 a 59 anos) (verificar situação vacinal anterior)', 
  ' ', 
- 'Minino: 30 dias')
+ 'Minino: 30 dias');
 
 -- dados vacina Sarampo, Caxumba e Rubéola
 
@@ -68,7 +68,7 @@ INSERT INTO vacina_idosoAdulto (nome_vacina, protecao_contra, composicao, num_do
  'Esquema Básico: 1 dose. 
   Reforço: 1 dose deve ser feita 5 anos após a primeira dose', 
   '60 anos (acamados ou institucionalizados)', 
-  ' ') 
+  ' ');
 
 -- dados vacina meningite e pneumonia
 
@@ -79,11 +79,11 @@ CREATE TABLE vacina_criancas(
   nome_vacina varchar(100) NOT NULL,
   protecao_contra varchar(100),
   composicao varchar(150),
-  num_doses varchar(200),
+  num_doses varchar(255),
   idade_recomendada varchar(100),
   intervalo_doses varchar(200),
   primary key (id_vacinaCriancas)
-)
+);
 
 -- Criação da tebela de vacinas para crianças
 
@@ -94,7 +94,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Esquema Básico: Dose única',
 'Ao Nascer',
 ' '  
-)
+);
 
 -- dados vacina BCG
 
@@ -105,7 +105,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Esquema Básico: ao nascer',
 'Ao nascer',
 ' '
-)
+);
 
 -- dados vacina hepatite B
 
@@ -115,7 +115,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Vírus inativado tipos 1,2, e 3',
 'Esquema Básico: 3 doses. Reforço: 2 reforços com a vacina VOP',
 '1ª dose: 2 meses. 2ª dose: 4 meses. 3ª dose: 6 meses',
-'Recomendado: 60 dias. Minimo: 30 dias')
+'Recomendado: 60 dias. Minimo: 30 dias');
 
 -- dados vacina poliomelite VIP
 
@@ -127,7 +127,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 '1° Reforço: 15 meses. 2° Reforço: 4 anos de idade',
 'Minimmo: 1º reforço: 6 meses após 3ª dose da VIP.
 2º reforço: 6 meses após 1º reforço '
-)
+);
 
 -- dados vacinas poliomelite VOP
 
@@ -139,7 +139,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 '1ª dose: 2 meses
 2ª dose: 4 meses',
 'Recomendado: 60 dias.
-Minimo: 30 dias')
+Minimo: 30 dias');
 
 -- dados vacinas rotavírus
 
@@ -154,7 +154,7 @@ Reforço: 2 reforços com a vacina DTP',
 2ª dose: 4meses
 3ª dose: 6 meses',
 'Recomendado: 60 dias.
-Minimo: 30 dias')
+Minimo: 30 dias');
 
 -- dados vacina DTP+Hib+HB (Penta)
 
@@ -168,7 +168,7 @@ Reforço: reforço',
 2ª dose: 4meses
 Reforço: 12meses',
 'Recomendado: 60 dias.
-Minino: 30 dias da 1ª para2ª dose e de 60 dias da 2ª dose para o 1º reforço')
+Minino: 30 dias da 1ª para2ª dose e de 60 dias da 2ª dose para o 1º reforço');
 
 -- dados vacina Pneumocócica
 
@@ -182,7 +182,7 @@ Reforço: reforço',
 2ª dose: 5 meses
 Reforço: 12 meses',
 'Recomendado: 60 dias.
-Mínimo: 30 dias da 1ª para2ª dose e de 60 dias da 2ª dose para o 1º reforço')
+Mínimo: 30 dias da 1ª para2ª dose e de 60 dias da 2ª dose para o 1º reforço');
 
 --dados vacina Meningite tipo C
 
@@ -194,7 +194,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 Reforço: reforço',
 'Dose: 9 meses
 Reforço: 4 anos de idade',
-'Mínino: 30 dias')
+'Mínino: 30 dias');
 
 -- dados vacina Febre Amarela
 
@@ -204,7 +204,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Vírus vivos atenuados',
 'Esquema Básico: 2 doses (primeira dose com SCR e segunda dose com SCRV)',
 '12 meses',
-'Mínino: 30 dias')
+'Mínino: 30 dias');
 
 -- dados vacina Sarampo, Caxumba e Rubéola
 
@@ -214,7 +214,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Vírus vivos atenuados',
 'Esquema Básico: 2 doses (segunda dose da SCR e primeira devaricela)',
 '15 meses',
-'Mínimo: 30 dias entre a dose de tríplice viral e a dose de tetraviral')
+'Mínimo: 30 dias entre a dose de tríplice viral e a dose de tetraviral');
 
 -- dados vacina Sarampo, Caxumba, Rubéola e Varicela
 
@@ -224,7 +224,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Antígeno do vírus da hepatite A, inativada',
 'Esquema Básico: 1 dose',
 '15 meses',
-' ')
+' ');
 
 -- dados vacina Hepatite A
 
@@ -239,7 +239,7 @@ Reforço: 2 reforços',
 'Recomendado: 1º ref. 9 meses após 3ª dose
 2º ref. 3 anos após 1º reforço.
 Minimo: 1º reforço: 6 meses após 3ª dose
-2ºreforço: 6 meses após 1º reforço')
+2ºreforço: 6 meses após 1º reforço');
 
 -- dados vacina Difteria, Tétano e Pertussis (DTP)
 
@@ -251,7 +251,7 @@ INSERT INTO vacina_criancas (nome_vacina, protecao_contra, composicao, num_doses
 Reforço: A cada 10 anos. Em caso de ferimentos graves a cada 5 anos',
 'A partir dos 7 anos de idade',
 'Recomendado: 60 dias.
-Mínino: 30 dias')
+Mínino: 30 dias');
 
 -- dados vacina Difteria e Tétano (dT)
 
@@ -261,7 +261,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Partícula da cápsula dovírus antígeno de superfície',
 'Recomendado: 2 doses',
 '9 a 14 anos para meninas e meninos',
-'Recomendado: 2ª dose: 6 meses após 1ª dose')
+'Recomendado: 2ª dose: 6 meses após 1ª dose');
 
 -- dados vacina HPV 
 
@@ -271,7 +271,7 @@ INSERT INTO vacina_criancas(nome_vacina,protecao_contra, composicao, num_doses, 
 'Polissacarídeo capsularde 23 sorotipos pneumococos',
 'Esquema Básico: 1 dose',
 'A partir de 5 anos de idade para os povos indígenas, sem comprovação da vacina PCV 10',
-' ')
+' ');
 
 -- dados vacina Pneumocócica 23-valente (PPV 23) (8)
 
@@ -281,7 +281,7 @@ INSERT INTO vacina_criancas(nome_vacina, protecao_contra, composicao, num_doses,
 'Vírus vivo atenuado',
 'Esquema Básico: 1 dose (corresponde à segunda dose da varicela)',
 '4 anos',
-'Mínino: 30 dias')
+'Mínino: 30 dias');
 
 -- dados vacina Varicela
 
@@ -294,11 +294,11 @@ CREATE TABLE vacina_gestante(
   nome_vacina varchar(100) NOT NULL,
   protecao_contra varchar(100),
   composicao varchar(150),
-  num_doses varchar(200),
+  num_doses varchar(255),
   idade_recomendada varchar(100),
   intervalo_doses varchar(200),
   primary key (id_vacinaGestante)
-)
+);
 
 -- Criação da tebela de vacinas para gestantes
 
@@ -311,7 +311,7 @@ INSERT INTO vacina_gestante(nome_vacina, protecao_contra, composicao, num_doses,
 'Recomendado: 2ª dose: 1 mês após 1ª dose 
 3ª dose: 6 meses após 1ª dose.
 Mínino: 2ª dose: 1 mês após 1ª dose
-3ª dose: 4 meses após 1ª dose')
+3ª dose: 4 meses após 1ª dose');
 
 -- dados vacina Hepatite B recombinante (1)
 
@@ -323,7 +323,7 @@ INSERT INTO vacina_gestante(nome_vacina, protecao_contra, composicao, num_doses,
 Reforço: A cada 10 anos. Em caso de ferimentos graves a cada 5 anos',
 ' ',
 'Recomendado: 60 dias.
-Mínino: 30 dias')
+Mínino: 30 dias');
 
 -- dados vacina Difteria e Tétano (dT)
 
@@ -335,7 +335,7 @@ INSERT INTO vacina_gestante(nome_vacina, protecao_contra, composicao, num_doses,
 Reforço: 1 dose a cada gestação',
 ' ',
 'Recomendado: 60 dias após dT.
-Mínino: 30 dias após dT')
+Mínino: 30 dias após dT');
 
 -- dados vacina Difteria, Tétano e Pertussis acelular (dTpa) (2)
 
@@ -346,11 +346,11 @@ CREATE TABLE vacina_adolescente(
   nome_vacina varchar(100) NOT NULL,
   protecao_contra varchar(100),
   composicao varchar(150),
-  num_doses varchar(200),
+  num_doses varchar(255),
   idade_recomendada varchar(100),
   intervalo_doses varchar(200),
   primary key (id_vacinaAdolescente)
-)
+);
 
 -- Criação da tabela de vacina para adolescente
 
@@ -363,7 +363,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Recomendado: 2ª dose: 1 mês após 1ª dose
 3ª dose: 6 meses após 1ª dose.
 Mínino: 2ª dose: 1 mês após 1ª dose
-3ª dose: 4 meses após 1ª dose')
+3ª dose: 4 meses após 1ª dose');
 
 -- dados vacina Hepatite B
 
@@ -375,7 +375,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 Reforço: A cada 10 anos. Em caso de ferimentos graves a cada 5 anos',
 ' ',
 'Recomendado: 60 dias.
-Mínino: 30 dias')
+Mínino: 30 dias');
 
 -- dados vacina Difteria e Tétano (dT)
 
@@ -386,7 +386,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Esquema Básico: Dose única, para pessoas que nunca foram vacinadas ou sem comprovante de vacinação.
 Reforço: Reforço, caso a pessoa tenha recebido uma dose da vacina antes de completar 5 anos de idade',
 'Dose única para pessoas que nunca foram vacinadas ou sem comprovante de vacinação',
-' ')
+' ');
 
 -- dados vacina Febre Amarela
 
@@ -396,7 +396,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Vírus vivos atenuados',
 'Esquema Básico: Iniciar ou completar 2 doses, de acordo com situação vacinal',
 ' ',
-'Mínino: 30 dias')
+'Mínino: 30 dias');
 
 -- dados vacina Sarampo, Caxumba e Rubéola (SCR) (1) (2)
 
@@ -406,7 +406,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Partícula da cápsulado vírus antígeno de superfície',
 'Esquema Básico: Iniciar ou completar 2 doses, de acordo com situação vacinal',
 '9 a 14 anos para Meninas e Meninos',
-'Recomendado: 2ª dose: 6 meses após 1ª dose')
+'Recomendado: 2ª dose: 6 meses após 1ª dose');
 
 -- dados vacina Papilomavírus humano(HPV) (3)
 
@@ -416,7 +416,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Polissacarídeo capsular de 23 sorotipos pneumococos',
 'Esquema Básico: 1 dose',
 'A partir de 5 anos de idade para os povos indígenas, sem comprovação da vacina PCV 10',
-' ')
+' ');
 
 -- dados vacina Pneumocócica 23-valente (PPV 23) (4)
 
@@ -426,7 +426,7 @@ INSERT INTO vacina_adolescente(nome_vacina, protecao_contra, composicao, num_dos
 'Polissacarídeos capsulares purificados da Neisseria meningitidis dossorogrupos A, C, W e Y',
 'Esquema Básico: 1 dose',
 '11 e 14 anos',
-' ')
+' ');
 
 -- dados vacina Meningocócica ACWY (Conjugada)
 
